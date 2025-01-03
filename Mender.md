@@ -199,9 +199,8 @@ end)
 
 
 local Tabs = {
-    Main= Window:AddTab({ Title = "| TELEPORT", Icon = "rbxassetid://18831424669" })
-}
-Window:SelectTab(1)
+    Main = Window:AddTab({ Title = "TP" }),
+
 MainTab:AddButton({
     Title = "Naruto",
     Callback = function()
@@ -253,10 +252,8 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Islan
     end
 })
 
-local Tabs = {
-    Main= Window:AddTab({ Title = "| MAIN", Icon = "rbxassetid://18831424669" })
-}
-Window:SelectTab(1)
+local Tabs = {   Main= Window:AddTab({ Title = "| MAIN", Icon = "rbxassetid://18831424669" })}
+Window:SelectTab(3)
 MainTab:AddButton({
     Title = "Reendem all codes",
     Callback = function()
