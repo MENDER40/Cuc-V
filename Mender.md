@@ -251,8 +251,9 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Islan
   print("TP“!")
     end
 })
-
-
+local Tabs = {
+    Main= Window:AddTab({ Title = "| MISC", Icon = "rbxassetid://18831424669" })
+}
 
     local AutoClick= Tabs.Main:AddToggle("EquipBest", {Title = "Auto Equip best", Default = false}) 
 AutoClick:OnChanged(function()
@@ -264,7 +265,6 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Pets"
            end
         end)
 
-
 local AutoClick= Tabs.Main:AddToggle("RankUp", {Title = "Auto rank up", Default = false})
 AutoClick:OnChanged(function()
     while AutoClick.Value do
@@ -273,4 +273,4 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Rank"
             wait(10)
            end
         end)
-
+        
