@@ -171,6 +171,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"
         wait(0)
     end
 end)
+
 local AutoClick= Tabs.Main:AddToggle("OnePiece", {Title = "3xDemonSlayer", Default = false})
 AutoClick:OnChanged(function()
     while AutoClick.Value do
@@ -199,7 +200,8 @@ end)
 
 
 local MainTab = Window:AddTab({ Title = "TELEPORT" })
-Window:SelectTab(1)
+
+
 MainTab:AddButton({
     Title = "Naruto",
     Callback = function()
