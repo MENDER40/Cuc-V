@@ -251,9 +251,11 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Islan
   print("TP“!")
     end
 })
+
 local Tabs = {
     Main= Window:AddTab({ Title = "| MISC", Icon = "rbxassetid://18831424669" })
 }
+Window:SelectTab(1)
 
     local AutoClick= Tabs.Main:AddToggle("EquipBest", {Title = "Auto Equip best", Default = false}) 
 AutoClick:OnChanged(function()
