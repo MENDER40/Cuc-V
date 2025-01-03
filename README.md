@@ -32,7 +32,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Energ
         end)
        
 local Tabs = {
-    Main= Window:AddTab({ Title = "| HathðŸ¥š", Icon = "rbxassetid://18831424669" })
+    Main= Window:AddTab({ Title = "| Hath", Icon = "rbxassetid://18831424669" })
 }
 Window:SelectTab(1)
 local AutoClick= Tabs.Main:AddToggle("Naruto", {Title = "Naruto", Default = false})
