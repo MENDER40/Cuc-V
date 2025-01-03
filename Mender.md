@@ -1,4 +1,4 @@
-local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+selocal Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local MarketplaceService = game:GetService("MarketplaceService")
 local PlaceId = game.PlaceId
 local ProductInfo = MarketplaceService:GetProductInfo(PlaceId)
@@ -199,8 +199,9 @@ end)
 
 
 local Tabs = {
-    Main = Window:AddTab({ Title = "TP" }),
-
+    Main = Window:AddTab({ Title = "Main" }),
+    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+}
 MainTab:AddButton({
     Title = "Naruto",
     Callback = function()
