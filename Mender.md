@@ -1,3 +1,9 @@
+es"):WaitForChild("Rank"):WaitForChild("UpdateRank"):InvokeServer()
+            wait(10)
+           end
+        end)
+
+
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local MarketplaceService = game:GetService("MarketplaceService")
 local PlaceId = game.PlaceId
@@ -143,6 +149,58 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"
     end
 end)
 
+local AutoClick= Tabs.Main:AddToggle("Naruto", {Title = "3xNaruto", Default = false})
+
+AutoClick:OnChanged(function()
+    while AutoClick.Value do
+--remote
+local args = {
+    [1] = "Naruto",
+    [2] = 3
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"):WaitForChild("Hatch"):InvokeServer(unpack(args))
+        wait(0)
+    end
+end)
+local AutoClick= Tabs.Main:AddToggle("OnePiece", {Title = "3xOnepiece ", Default = false})
+
+AutoClick:OnChanged(function()
+    while AutoClick.Value do
+--remote
+local args = {
+    [1] = "OnePiece",
+    [2] = 3
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"):WaitForChild("Hatch"):InvokeServer(unpack(args))
+
+        wait(0)
+    end
+end)
+local AutoClick= Tabs.Main:AddToggle("OnePiece", {Title = "3xDemonSlayer", Default = false})
+AutoClick:OnChanged(function()
+    while AutoClick.Value do
+--remote
+local args = {
+    [1] = "DemonSlayer",
+    [2] = 3
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"):WaitForChild("Hatch"):InvokeServer(unpack(args))
+        wait(0)
+    end
+end)
+local AutoClick= Tabs.Main:AddToggle("OnePiece", {Title = "3xDragonball", Default = false})
+AutoClick:OnChanged(function()
+    while AutoClick.Value do
+--remote
+local args = {
+    [1] = "DragonBall",
+    [2] = 3
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"):WaitForChild("Hatch"):InvokeServer(unpack(args))
+        wait(0)
+    end
+end)
 
 
 
@@ -200,6 +258,19 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Islan
 })
 
 local Tabs = {Main = Window:AddTab({ Title = "Main" })}
+MainTab:AddButton({
+    Title = "Reendem all codes",
+    Callback = function()
+--remote
+  local args = {
+    [1] = "Release!"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Codes"):WaitForChild("RedeemCode"):InvokeServer(unpack(args))
+ print("resgatado")
+    end
+})
+
     local AutoClick= Tabs.Main:AddToggle("EquipBest", {Title = "Auto Equip best", Default = false})
 AutoClick:OnChanged(function()
     while AutoClick.Value do
@@ -219,5 +290,4 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Rank"
             wait(10)
            end
         end)
-
 
