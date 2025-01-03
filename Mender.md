@@ -201,6 +201,7 @@ end)
 local Tabs = {
     Main= Window:AddTab({ Title = "| TELEPORT", Icon = "rbxassetid://18831424669" })
 }
+Window:SelectTab(1)
 MainTab:AddButton({
     Title = "Naruto",
     Callback = function()
@@ -253,11 +254,22 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Islan
 })
 
 local Tabs = {
-    Main= Window:AddTab({ Title = "| MISC", Icon = "rbxassetid://18831424669" })
+    Main= Window:AddTab({ Title = "| MAIN", Icon = "rbxassetid://18831424669" })
 }
 Window:SelectTab(1)
+MainTab:AddButton({
+    Title = "Reendem all codes",
+    Callback = function()
+--remote
+  local args = {
+    [1] = "Release!"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Codes"):WaitForChild("RedeemCode"):InvokeServer(unpack(args))
+ print("resgatado")
+    end
+})
 
-    local AutoClick= Tabs.Main:AddToggle("EquipBest", {Title = "Auto Equip best", Default = false}) 
+    local AutoClick= Tabs.Main:AddToggle("EquipBest", {Title = "Auto Equip best", Default = false})
 AutoClick:OnChanged(function()
     while AutoClick.Value do
     --remote
@@ -267,6 +279,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Pets"
            end
         end)
 
+
 local AutoClick= Tabs.Main:AddToggle("RankUp", {Title = "Auto rank up", Default = false})
 AutoClick:OnChanged(function()
     while AutoClick.Value do
@@ -275,4 +288,4 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Rank"
             wait(10)
            end
         end)
-        
+
