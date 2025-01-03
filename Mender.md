@@ -198,9 +198,7 @@ end)
 
 
 
-local Tabs = {
-    Main = Window:AddTab({ Title = "MENU FARM" })
-    }
+local MainTab = Window:AddTab({ Title = "TELEPORT" })
 MainTab:AddButton({
     Title = "Naruto",
     Callback = function()
@@ -252,10 +250,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Islan
     end
 })
 
-local Tabs = {
-    Main = Window:AddTab({ Title = "MENU FARM" })
-    }
-MainTab:
+local MainTab = Window:AddTab({ Title = "MISC" })
 
 MainTab:AddButton({
     Title = "Reendem all codes",
