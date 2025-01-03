@@ -199,6 +199,7 @@ end)
 
 
 local MainTab = Window:AddTab({ Title = "TELEPORT" })
+Window:SelectTab(1)
 MainTab:AddButton({
     Title = "Naruto",
     Callback = function()
@@ -250,19 +251,8 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Islan
     end
 })
 
-local MainTab = Window:AddTab({ Title = "MISC" })
-
-MainTab:AddButton({
-    Title = "Reendem all codes",
-    Callback = function()
---remote
-  local args = {
-    [1] = "Release!"
-}
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Codes"):WaitForChild("RedeemCode"):InvokeServer(unpack(args))
- print("resgatado")
-    end
-})
+local MainTab = Window:AddTab({ Title = "TELEPORT" })
+Window:SelectTab(1)
 
     local AutoClick= Tabs.Main:AddToggle("EquipBest", {Title = "Auto Equip best", Default = false})
 AutoClick:OnChanged(function()
