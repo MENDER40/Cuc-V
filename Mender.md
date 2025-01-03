@@ -273,6 +273,3 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Rank"
            end
         end)
 
-local Tabs = {
-local MainTab = Window:AddTab({ Title = "TELEPORT" })
-}
