@@ -252,21 +252,9 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Islan
     end
 })
 
-local Tabs = {Main = Window:AddTab({ Title = "Main" })}
-MainTab:AddButton({
-    Title = "Reendem all codes",
-    Callback = function()
---remote
-  local args = {
-    [1] = "Release!"
-}
 
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Codes"):WaitForChild("RedeemCode"):InvokeServer(unpack(args))
- print("resgatado")
-    end
-})
 
-    local AutoClick= Tabs.Main:AddToggle("EquipBest", {Title = "Auto Equip best", Default = false})
+    local AutoClick= Tabs.Main:AddToggle("EquipBest", {Title = "Auto Equip best", Default = false}) 
 AutoClick:OnChanged(function()
     while AutoClick.Value do
     --remote
