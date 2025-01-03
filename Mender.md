@@ -209,3 +209,15 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Pets"
             wait(10)
            end
         end)
+
+
+local AutoClick= Tabs.Main:AddToggle("RankUp", {Title = "Auto rank up", Default = false})
+AutoClick:OnChanged(function()
+    while AutoClick.Value do
+    --remote
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Rank"):WaitForChild("UpdateRank"):InvokeServer()
+            wait(10)
+           end
+        end)
+
+
