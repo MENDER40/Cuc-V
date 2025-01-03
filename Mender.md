@@ -198,10 +198,8 @@ end)
 
 
 
-local Tabs = {
-    Main = Window:AddTab({ Title = "Main" }),
-    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
-}
+local Tabs = {   Main= Window:AddTab({ Title = "| MAIN", Icon = "rbxassetid://18831424669" })}
+Window:SelectTab(3)
 MainTab:AddButton({
     Title = "Naruto",
     Callback = function()
@@ -253,8 +251,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Islan
     end
 })
 
-local Tabs = {   Main= Window:AddTab({ Title = "| MAIN", Icon = "rbxassetid://18831424669" })}
-Window:SelectTab(3)
+
 MainTab:AddButton({
     Title = "Reendem all codes",
     Callback = function()
