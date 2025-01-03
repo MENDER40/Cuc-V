@@ -198,8 +198,9 @@ end)
 
 
 
-local Tabs = {   Main= Window:AddTab({ Title = "| MAIN", Icon = "rbxassetid://18831424669" })}
-Window:SelectTab(3)
+local Tabs = {
+    Main = Window:AddTab({ Title = "MENU FARM" })
+    }
 MainTab:AddButton({
     Title = "Naruto",
     Callback = function()
@@ -251,6 +252,10 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Islan
     end
 })
 
+local Tabs = {
+    Main = Window:AddTab({ Title = "MENU FARM" })
+    }
+MainTab:
 
 MainTab:AddButton({
     Title = "Reendem all codes",
