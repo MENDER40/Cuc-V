@@ -251,9 +251,8 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Islan
     end
 })
 
-local MainTab = Window:AddTab({ Title = "TELEPORT" })
+local MainTab = Window:AddTab({ Title = "MISC" })
 Window:SelectTab(1)
-
     local AutoClick= Tabs.Main:AddToggle("EquipBest", {Title = "Auto Equip best", Default = false})
 AutoClick:OnChanged(function()
     while AutoClick.Value do
