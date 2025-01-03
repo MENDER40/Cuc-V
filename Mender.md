@@ -199,8 +199,10 @@ end)
 
 
 local Tabs = {
-    Main= Window:AddTab({ Title = "| TELEPORT", Icon = "rbxassetid://18831424669" })
+    Main= Window:AddTab({ Title = "| Misc", Icon = "rbxassetid://18831424669" })
 }
+
+Window:SelectTab(1)
 MainTab:AddButton({
     Title = "Naruto",
     Callback = function()
