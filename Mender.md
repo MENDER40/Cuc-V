@@ -6,14 +6,6 @@ local GameName = ProductInfo.Name
 
 Fluent:Notify({ Title = "Script executado com sucesso", Content = "Você esta usando Mender_hub" })
 
-local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-local MarketplaceService = game:GetService("MarketplaceService")
-local PlaceId = game.PlaceId
-local ProductInfo = MarketplaceService:GetProductInfo(PlaceId)
-local GameName = ProductInfo.Name
-
-Fluent:Notify({ Title = "Script executado com sucesso", Content = "Você esta usando Mender_hub" })
-
 local Window = Fluent:CreateWindow({
     Title = "Mender_hub",
     SubTitle = "-- " .. GameName,
