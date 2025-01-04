@@ -196,6 +196,58 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"
     end
 end)
 
+local AutoClick= Tabs.Main:AddToggle("Naruto", {Title = "4xNaruto", Default = false})
+
+AutoClick:OnChanged(function()
+    while AutoClick.Value do
+--remote
+local args = {
+    [1] = "Naruto",
+    [2] = 4
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"):WaitForChild("Hatch"):InvokeServer(unpack(args))
+        wait(0)
+    end
+end)
+local AutoClick= Tabs.Main:AddToggle("OnePiece", {Title = "4xOnepiece ", Default = false})
+
+AutoClick:OnChanged(function()
+    while AutoClick.Value do
+--remote
+local args = {
+    [1] = "OnePiece",
+    [2] = 4
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"):WaitForChild("Hatch"):InvokeServer(unpack(args))
+
+        wait(0)
+    end
+end)
+local AutoClick= Tabs.Main:AddToggle("OnePiece", {Title = "4xDemonSlayer", Default = false})
+AutoClick:OnChanged(function()
+    while AutoClick.Value do
+--remote
+local args = {
+    [1] = "DemonSlayer",
+    [2] = 4
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"):WaitForChild("Hatch"):InvokeServer(unpack(args))
+        wait(0)
+    end
+end)
+local AutoClick= Tabs.Main:AddToggle("OnePiece", {Title = "4xDragonball", Default = false})
+AutoClick:OnChanged(function()
+    while AutoClick.Value do
+--remote
+local args = {
+    [1] = "DragonBall",
+    [2] = 4
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"):WaitForChild("Hatch"):InvokeServer(unpack(args))
+        wait(0)
+    end
+end)
 
 local MainTab = Window:AddTab({ Title = "TELEPORT" })
 
