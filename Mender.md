@@ -303,6 +303,85 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"
     end
 end)
 
+local MainTab = Window:AddTab({ Title = "XMAX EVENT" })
+
+local AutoClick= Tabs.Main:AddToggle("Christmas", {Title = "2xChristmas", Default = false})
+AutoClick:OnChanged(function()
+    while AutoClick.Value do
+--remote
+local args = {
+    [1] = "Christmas",
+    [2] = 2
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"):WaitForChild("Hatch"):InvokeServer(unpack(args))
+
+        wait(0)
+    end
+end)
+
+local AutoClick= Tabs.Main:AddToggle("Christmas", {Title = "3xChristmas", Default = false})
+AutoClick:OnChanged(function()
+    while AutoClick.Value do
+--remote
+local args = {
+    [1] = "Christmas",
+    [2] = 3
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"):WaitForChild("Hatch"):InvokeServer(unpack(args))
+
+        wait(0)
+    end
+end)
+
+local AutoClick= Tabs.Main:AddToggle("Christmas", {Title = "3xChristmas", Default = false})
+AutoClick:OnChanged(function()
+    while AutoClick.Value do
+--remote
+local args = {
+    [1] = "Christmas",
+    [2] = 3
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"):WaitForChild("Hatch"):InvokeServer(unpack(args))
+
+        wait(0)
+    end
+end)
+
+
+local AutoClick= Tabs.Main:AddToggle("Christmas", {Title = "4xChristmas", Default = false})
+AutoClick:OnChanged(function()
+    while AutoClick.Value do
+--remote
+local args = {
+    [1] = "Christmas",
+    [2] = 4
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"):WaitForChild("Hatch"):InvokeServer(unpack(args))
+
+        wait(0)
+    end
+end)
+
+
+local AutoClick= Tabs.Main:AddToggle("Christmas", {Title = "5xChristmas", Default = false})
+AutoClick:OnChanged(function()
+    while AutoClick.Value do
+--remote
+local args = {
+    [1] = "Christmas",
+    [2] = 5
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"):WaitForChild("Hatch"):InvokeServer(unpack(args))
+
+        wait(0)
+    end
+end)
+
 local MainTab = Window:AddTab({ Title = "TELEPORT" })
 
 MainTab:AddButton({
