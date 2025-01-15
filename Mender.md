@@ -21,10 +21,7 @@ local Tabs = {
 
 Window:SelectTab(1)
 local AutoClick= Tabs.Main:AddToggle("Naruto", {Title = "Auto energy", Default = false})
-Tab:AddParagraph({
-    Title = "Paragraph",
-    Content = "This is a paragraph.\nSecond line!"
-})
+
 AutoClick:OnChanged(function()
     while AutoClick.Value do
     --remote
@@ -51,6 +48,10 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"
         wait(0)
     end
 end)
+Tab:AddParagraph({
+    Title = "Paragraph",
+    Content = "This is a paragraph.\nSecond line!"
+})
 local AutoClick= Tabs.Main:AddToggle("OnePiece", {Title = "Onepiece ", Default = false})
 
 AutoClick:OnChanged(function()
