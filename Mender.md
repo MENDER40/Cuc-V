@@ -34,7 +34,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Energ
 local Tabs = {
     Main= Window:AddTab({ Title = "| Hath", Icon = "rbxassetid://18831424669" })
 }
-Window:SelectTab(1)
+Window:SelectTab(2)
 local AutoClick= Tabs.Main:AddToggle("Naruto", {Title = "Naruto", Default = false})
 
 AutoClick:OnChanged(function()
@@ -305,7 +305,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"
 end)
 
 local MainTab = Window:AddTab({ Title = "TELEPORT" })
-
+Window:SelectTab(4)
 MainTab:AddButton({
     Title = "Naruto",
     Callback = function()
