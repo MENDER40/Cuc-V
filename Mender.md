@@ -49,11 +49,6 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"
     end
 end)
 
-Tab:AddParagraph({
-    Title = "Paragraph",
-    Content = "This is a paragraph.\nSecond line!"
-})
-
 local AutoClick= Tabs.Main:AddToggle("OnePiece", {Title = "Onepiece ", Default = false})
 
 AutoClick:OnChanged(function()
