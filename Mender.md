@@ -16,13 +16,10 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.LeftControl
 })
 
-Tab:AddParagraph({
-    Title = "Paragraph",
-    Content = "This is a paragraph.\nSecond line!"
-})
+
 local Tabs = {
     Main= Window:AddTab({ Title = "| Farm", Icon = "rbxassetid://18831424669" })
-}
+
 
 Window:SelectTab(1)
 local AutoClick= Tabs.Main:AddToggle("Naruto", {Title = "Auto energy", Default = false})
