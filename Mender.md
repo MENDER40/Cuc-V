@@ -48,7 +48,6 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"
         wait(0)
     end
 end)
-
 local AutoClick= Tabs.Main:AddToggle("OnePiece", {Title = "Onepiece ", Default = false})
 
 AutoClick:OnChanged(function()
@@ -90,7 +89,6 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"
 end)
 
 
-Window:SelectTab(2)
 local AutoClick= Tabs.Main:AddToggle("Naruto", {Title = "2xNaruto", Default = false})
 
 AutoClick:OnChanged(function()
