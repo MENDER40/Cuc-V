@@ -15,13 +15,16 @@ local Window = Fluent:CreateWindow({
     Theme = "Dark",
     MinimizeKey = Enum.KeyCode.LeftControl
 })
-
 local Tabs = {
     Main= Window:AddTab({ Title = "| Farm", Icon = "rbxassetid://18831424669" })
+}
 
 Window:SelectTab(1)
 local AutoClick= Tabs.Main:AddToggle("Naruto", {Title = "Auto energy", Default = false})
-
+Tab:AddParagraph({
+    Title = "Paragraph",
+    Content = "This is a paragraph.\nSecond line!"
+})
 AutoClick:OnChanged(function()
     while AutoClick.Value do
     --remote
@@ -89,6 +92,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"
 end)
 
 
+Window:SelectTab(1)
 local AutoClick= Tabs.Main:AddToggle("Naruto", {Title = "2xNaruto", Default = false})
 
 AutoClick:OnChanged(function()
@@ -302,85 +306,6 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"
     end
 end)
 
-local MainTab = Window:AddTab({ Title = "XMAX EVENT" })
-
-local AutoClick= Tabs.Main:AddToggle("Christmas", {Title = "2xChristmas", Default = false})
-AutoClick:OnChanged(function()
-    while AutoClick.Value do
---remote
-local args = {
-    [1] = "Christmas",
-    [2] = 2
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"):WaitForChild("Hatch"):InvokeServer(unpack(args))
-
-        wait(0)
-    end
-end)
-
-local AutoClick= Tabs.Main:AddToggle("Christmas", {Title = "3xChristmas", Default = false})
-AutoClick:OnChanged(function()
-    while AutoClick.Value do
---remote
-local args = {
-    [1] = "Christmas",
-    [2] = 3
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"):WaitForChild("Hatch"):InvokeServer(unpack(args))
-
-        wait(0)
-    end
-end)
-
-local AutoClick= Tabs.Main:AddToggle("Christmas", {Title = "3xChristmas", Default = false})
-AutoClick:OnChanged(function()
-    while AutoClick.Value do
---remote
-local args = {
-    [1] = "Christmas",
-    [2] = 3
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"):WaitForChild("Hatch"):InvokeServer(unpack(args))
-
-        wait(0)
-    end
-end)
-
-
-local AutoClick= Tabs.Main:AddToggle("Christmas", {Title = "4xChristmas", Default = false})
-AutoClick:OnChanged(function()
-    while AutoClick.Value do
---remote
-local args = {
-    [1] = "Christmas",
-    [2] = 4
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"):WaitForChild("Hatch"):InvokeServer(unpack(args))
-
-        wait(0)
-    end
-end)
-
-
-local AutoClick= Tabs.Main:AddToggle("Christmas", {Title = "5xChristmas", Default = false})
-AutoClick:OnChanged(function()
-    while AutoClick.Value do
---remote
-local args = {
-    [1] = "Christmas",
-    [2] = 5
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"):WaitForChild("Hatch"):InvokeServer(unpack(args))
-
-        wait(0)
-    end
-end)
-
 local MainTab = Window:AddTab({ Title = "TELEPORT" })
 
 MainTab:AddButton({
@@ -454,4 +379,3 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Rank"
             wait(10)
            end
         end)
-
