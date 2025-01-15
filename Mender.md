@@ -15,6 +15,11 @@ local Window = Fluent:CreateWindow({
     Theme = "Dark",
     MinimizeKey = Enum.KeyCode.LeftControl
 })
+
+Tab:AddParagraph({
+    Title = "Paragraph",
+    Content = "This is a paragraph.\nSecond line!"
+})
 local Tabs = {
     Main= Window:AddTab({ Title = "| Farm", Icon = "rbxassetid://18831424669" })
 }
@@ -48,6 +53,12 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"
         wait(0)
     end
 end)
+
+Tab:AddParagraph({
+    Title = "Paragraph",
+    Content = "This is a paragraph.\nSecond line!"
+})
+
 local AutoClick= Tabs.Main:AddToggle("OnePiece", {Title = "Onepiece ", Default = false})
 
 AutoClick:OnChanged(function()
@@ -89,7 +100,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"
 end)
 
 
-Window:SelectTab(1)
+Window:SelectTab(2)
 local AutoClick= Tabs.Main:AddToggle("Naruto", {Title = "2xNaruto", Default = false})
 
 AutoClick:OnChanged(function()
