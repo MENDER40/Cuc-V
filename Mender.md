@@ -48,6 +48,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Eggs"
         wait(0)
     end
 end)
+
 Tab:AddParagraph({
     Title = "Paragraph",
     Content = "This is a paragraph.\nSecond line!"
