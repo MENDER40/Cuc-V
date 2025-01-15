@@ -16,10 +16,8 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.LeftControl
 })
 
-
 local Tabs = {
     Main= Window:AddTab({ Title = "| Farm", Icon = "rbxassetid://18831424669" })
-
 
 Window:SelectTab(1)
 local AutoClick= Tabs.Main:AddToggle("Naruto", {Title = "Auto energy", Default = false})
