@@ -146,8 +146,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("
     end
 end)
 
-local AutoClick= Tabs.Main:AddToggle("Naruto", {Title = "Fast egg P
-City mortal", Default = false})
+local AutoClick= Tabs.Main:AddToggle("Naruto", {Title = "Fast egg City mortal", Default = false})
 AutoClick:OnChanged(function()
     while AutoClick.Value do
 --remote
